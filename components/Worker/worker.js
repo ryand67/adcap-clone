@@ -14,6 +14,10 @@ const Worker = ({ updateScore, currentScore, productivityLevel, name, unlocked, 
 
     //Works and updates score
     const work = () => {
+        setWorkStatus(true);
+        setTimeout(() => {
+            setWorkStatus(false);
+        }, 1000)
         updateScore(currentScore + productivity);
     }
 
@@ -34,7 +38,7 @@ const Worker = ({ updateScore, currentScore, productivityLevel, name, unlocked, 
             {/* Checks status and if they're working displays that the worker is working or idle */}
             <h2 className={style.status}>{workStatus ? 'Working' : 'Idle'}</h2>
             {/* Checks if the worker is unlocked, and whether it's automated and displays the appropriate buttons */}
-            {unlocked ? (automated ? <h2>Automated</h2> : <button onClick={work}>Click to Work</button>) : <button onClick={buyWorker}>Purchase Worker</button>}
+            {unlocked ? (automated ? <h2>Automated</h2> : (workStatus ? <button>Click to Work</button> : <button onClick={work}>Click to Work</button>)) : <button onClick={buyWorker}>Purchase Worker</button>}
             {/* Upgrade button */}
             <button>Upgrade</button>
             {automated ? <></> : <button onClick={automate}>Automate</button>}
