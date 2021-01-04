@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 
+//RUNS THE SHOW
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
