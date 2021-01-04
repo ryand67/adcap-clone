@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <h1>${testScore}</h1>
-      <Worker currentScore={testScore} updateScore={setScore} />
+      <Worker currentScore={testScore} updateScore={setScore} productivityLevel={1} unlocked={true} name="Basic Worker" price={0} />
     </div>
   )
 }

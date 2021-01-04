@@ -1,14 +1,24 @@
 import style from './worker.module.css';
+import getProductivity from './workerUtil/getProductivity';
+import { useState } from 'react';
 
-const Worker = ({ updateScore, currentScore }) => {
+const Worker = ({ updateScore, currentScore, productivityLevel, name, unlocked }) => {
+    const [productivity, setProductivity] = useState(getProductivity(name));
+
     const work = () => {
-        updateScore(currentScore + 1);
+        updateScore(currentScore + productivity);
+    }
+
+    const buyWorker = () => {
+
     }
 
     return (
         <div className={style.worker}>
-            <h2>Basic Worker</h2>
-            <button onClick={work}>Click to Work</button>
+            <h2>{name}</h2>
+            {unlocked ? <button onClick={work}>Click to Work</button> : <button onClick={buyWorker}>Purchase Worker</button>}
+            <button>Upgrade</button>
+            <button>Automate</button>
         </div>
     )
 }
