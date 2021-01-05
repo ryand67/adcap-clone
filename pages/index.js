@@ -12,6 +12,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>AdCap Clone</title>
+        <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/social-messaging-productivity-4/128/dollar-sign-512.png" type="image/x-icon"/>
       </Head>
       {/* display score */}
       <h1>${testScore.toFixed(2)}</h1>
