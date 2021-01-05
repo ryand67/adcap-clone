@@ -6,6 +6,10 @@
     align-items: center;
 }
 
+.worker h2 {
+    margin-left: 1em;
+}
+
 .worker button {
     margin-left: 1em;
     height: 3em;

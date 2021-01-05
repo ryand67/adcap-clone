@@ -17,7 +17,7 @@ export default function Home() {
       {/* display score */}
       <h1>${testScore.toFixed(2)}</h1>
       {/* Worker components */}
-      <Worker currentScore={testScore} updateScore={setScore} productivityLevel={1} unlocked={true} name="Basic Worker" price={0} automatedProp={false} />
+      <Worker currentScore={testScore} updateScore={setScore} unlocked={true} name="Basic Worker" price={0} automatedProp={false} automatePrice={1} />
     </div>
   )
 }
