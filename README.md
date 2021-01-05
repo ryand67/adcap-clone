@@ -4,4 +4,4 @@ NextJS app aiming to get the functionality of the game Adventure Capitalist work
 
 ## Live app
 
-[Find the live demo here](adcap-clone.vercel.app)
+[adcap-clone.vercel.app]
