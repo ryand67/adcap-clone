@@ -67,7 +67,7 @@ const Worker = ({ updateScore, currentScore, name, unlocked, automatedProp, auto
             {unlocked ? (automated ? <h2>Automated</h2> : (workStatus ? <button>Click to Work</button> : <button onClick={work}>Click to Work</button>)) : <button onClick={buyWorker}>Purchase Worker</button>}
             {/* Upgrade button */}
             <button onClick={upgradeWorker}>Upgrade</button>
-            {automated ? <></> : <button onClick={automatePurchase}>Automate (${automatePrice})</button>}
+            {/* {automated ? <></> : <button onClick={automatePurchase}>Automate (${automatePrice})</button>} */}
         </div>
     )
 }
