@@ -11,7 +11,7 @@ export default function Home() {
     
     <div className={styles.container}>
       <Head>
-        <title>AdCap Clone: ${currentScore}</title>
+        <title>AdCap Clone: ${currentScore.toFixed(2)}</title>
         <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/social-messaging-productivity-4/128/dollar-sign-512.png" type="image/x-icon"/>
       </Head>
       {/* display score */}
