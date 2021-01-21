@@ -7,6 +7,7 @@ export default function Home() {
   //Total score
   const [currentScore, setScore] = useState(0);
 
+  
   return (
     
     <div className={styles.container}>
